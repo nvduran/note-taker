@@ -30,6 +30,7 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req,res) => {
      const note = req.body;
+     note.id = uniqid();
       notes.push(note);
       saveNotes();
  

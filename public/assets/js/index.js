@@ -54,8 +54,8 @@ const renderActiveNote = () => {
      hide(saveNoteBtn);
 
      if (activeNote.id) {
-          noteTitle.setAttribute('readonly', true);
-          noteText.setAttribute('readonly', true);
+         //noteTitle.setAttribute('readonly', true);
+          //noteText.setAttribute('readonly', true);
           noteTitle.value = activeNote.title;
           noteText.value = activeNote.text;
      } else {
@@ -175,6 +175,8 @@ if (window.location.pathname === '/notes') {
      newNoteBtn.addEventListener('click', handleNewNoteView);
      noteTitle.addEventListener('keyup', handleRenderSaveBtn);
      noteText.addEventListener('keyup', handleRenderSaveBtn);
+
+
 }
 
 getAndRenderNotes();
